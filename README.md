@@ -92,8 +92,9 @@ and you can stop and remove the container (not the container image) with the com
 `docker stop 639bd33a27fb && docker rm 639bd33a27fb` where `639bd33a27fb` is the
 container id.
 
-### Running the container on Windows
+## Running the container on Windows
 
+Install Docker for Windows, set your shared drives and execute: 
  ```shell
 docker run -d -v  C:\directoryToChange\ModelicaInAction\modelica:/home/docker/modelica  -v  C:\directoryToChange\ModelicaInAction\ipynotebooks:/home/docker/ipynotebooks -p 127.0.0.1:8888:8888 mode
 licainaction/jmodelica:1.0 sh -c 'ipython notebook --no-browser --matplotlib=inline --ip=0.0.0.0 --port=8888 --notebook-dir=/home/docker/ipynotebooks' ```
